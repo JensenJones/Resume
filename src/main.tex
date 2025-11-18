@@ -1,0 +1,254 @@
+%-------------------------
+% Resume in Latex
+% Author : AlgoUniversity
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage[dvipsnames]{xcolor}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\color{BrickRed}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{BrickRed}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item {\small #1 \vspace{-6pt}}
+}
+
+\newcommand{\classesList}[4]{
+    \item\small{
+        {#1 #2 #3 #4 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[5]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} #3 & \textbf{\small #2} \\ % #1 = main title, #2 = date, #3 = secondary left info (e.g., org)
+      \textit{\small #4} & \textit{\small #5} \\ % #4 = subtitle/extra left, #5 = extra right
+    \end{tabular*}\vspace{-17pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[1]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{\small #1}
+    \end{tabular*}\vspace{-10pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+
+% Resume item with two aligned pieces on the same line as the bullet
+\newcommand{\resumeItemTwoPiece}[2]{%
+  \item \begin{minipage}[t]{0.51\textwidth}\small #1\end{minipage}%
+        \begin{minipage}[t]{0.40\textwidth}\small #2\end{minipage}%
+  \vspace{-6pt}%
+}
+
+% Work entry with job description and company split in two columns, date right-aligned
+\newcommand{\resumeWorkEntry}[3]{%
+  \item
+    \begin{minipage}[t]{0.55\textwidth}\small \textbf{#1}\end{minipage}%  % Job title
+    \begin{minipage}[t]{0.30\textwidth}\small #2\end{minipage}%  % Company
+    \hfill%
+    \begin{minipage}[t]{0.12\textwidth}\raggedleft\small #3\end{minipage}%  % Date
+  \vspace{-12pt}%
+}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+\begin{center}
+  {\Huge \scshape Jensen Jones} \\ \vspace{5pt}
+  \small {jensen.jones111@gmail.com}  ---  {0422 495 193}
+  \vspace{-8pt}
+\end{center}
+
+\vspace{-10pt}
+%-----------EDUCATION-----------
+\section*{Education}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+    {Bachelor of Computing Science}
+    {2023 -- 2026}{(Honours)}
+    {Major in Mathematical Analysis}
+    {University of Technology Sydney}
+
+\begin{itemize}
+    \item Vice President - UTS Competitive Programming Society
+    \vspace{-4pt}
+    \item 91 WAM
+    \vspace{-4pt}
+    \item Dean's List recipient every year
+    \vspace{-4pt}
+\end{itemize}
+
+\resumeSubHeadingListEnd
+\vspace{-17pt}
+
+% -----------EXPERIENCE-----------
+\section*{Work Experience}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+  {Software Developer Intern}{Dec 2025 -- Feb 2026}{-- Macquarie Bank}{Order Booking Team}{ }
+
+\resumeItemListStart
+  \resumeItem{--------- Did Some Stuff ---------}
+  \resumeItem{--------- Did Some More Stuff ---------}
+  \resumeItem{--------- Did Even More Stuff ---------}
+\resumeItemListEnd
+\vspace{-4pt}
+
+\resumeWorkEntry{Maths \& Computer Science Tutor}{Self Employed}{2025 -- Present}
+\resumeWorkEntry{Cabinet Maker}{Ekard Concepts}{2022 -- Present}
+\resumeWorkEntry{Semi Professional Soccer Player}{Western Rage FC}{2022 -- 2024}
+\resumeWorkEntry{Delivery Expert}{Dominos Pyrmont}{2021 -- 2022}
+\resumeWorkEntry{Childcare Worker}{Annandale After School Care}{2018 -- 2021}
+
+\resumeSubHeadingListEnd
+\vspace{-13pt}
+
+
+%-----------PROJECTS-----------
+\section*{Projects \& Further Studies}
+\vspace{-5pt}
+
+\resumeSubHeadingListStart
+
+\resumeProjectHeading{Client-Server Trading Exchange/Matching Engine}
+\resumeItemListStart
+\resumeItem{Implemented in Java}
+\resumeItem{GRPC based server connectivity}
+\resumeItem{Swing based GUI}
+\resumeItemListEnd
+\vspace{-13pt}
+
+\resumeProjectHeading{Crypto Market Data Visualiser}
+\resumeItemListStart
+\resumeItem{Implemented in C++}
+\resumeItem{Asynchronous web socket server connection using Boost}
+\resumeItem{Something else}
+\resumeItemListEnd
+\vspace{-13pt}
+
+\resumeProjectHeading{Courses}
+\resumeItemListStart
+\resumeItemTwoPiece{Machine Learning Specialisation}            {Stanford Online}
+\resumeItemTwoPiece{Options 201}                                {Akuna Capital}
+\resumeItemTwoPiece{Options 101}                                {Akuna Capital}
+\resumeItemTwoPiece{Introduction to Algorithms}                 {MIT Open Courseware}
+\resumeItemTwoPiece{CS50}                                       {Harvard University Online}
+\resumeItemListEnd
+\vspace{-13pt}
+
+\resumeProjectHeading{Readings}
+\resumeItemListStart
+\resumeItemTwoPiece{C++ Software Design}                        {Klaus Iglberger}
+\resumeItemTwoPiece{C++ 23 Best Practices}                      {Jason Turner}
+\resumeItemTwoPiece{Inside the Machine}                         {Jon Stokes}
+\resumeItemTwoPiece{A tour of C++}                              {Bjarne Stroustrup}
+\resumeItemTwoPiece{Operating Systems: Three Easy Pieces}       {Remsi H, Andrea C}
+\resumeItemTwoPiece{All About High Frequency trading}           {Michael Durbin}
+\resumeItemListEnd
+\vspace{-13pt}
+
+\resumeSubHeadingListEnd
+\vspace{-3pt}
+
+
+%
+%-----------PROGRAMMING SKILLS-----------
+\section*{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \item{
+        \textbf{Languages}{: C++, Python, Java} \\
+        \textbf{Developer Tools}{: Postman, VS Code, GitHub, Xcode} \\
+
+        }
+\end{itemize}
+\vspace{-15pt}
+
+
+
+\section*{Interests}
+\vspace{-3pt}
+\begin{tabular*}{\textwidth}{c @{\extracolsep{\fill}} c @{\extracolsep{\fill}} c @{\extracolsep{\fill}} c @{\extracolsep{\fill}} c}
+Soccer & Trees & Competitive Programming &  &  \\
+\end{tabular*}
+
+
+
+\end{document}
