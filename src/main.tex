@@ -78,7 +78,7 @@
 \newcommand{\resumeSubheading}[5]{
   \vspace{-2pt}\item
     \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} #3 & \textbf{\small #2} \\ % #1 = main title, #2 = date, #3 = secondary left info (e.g., org)
+      \textbf{#1} #3 & {\small #2} \\ % #1 = main title, #2 = date, #3 = secondary left info (e.g., org)
       \textit{\small #4} & \textit{\small #5} \\ % #4 = subtitle/extra left, #5 = extra right
     \end{tabular*}\vspace{-17pt}
 }
@@ -90,10 +90,10 @@
     \end{tabular*}\vspace{-7pt}
 }
 
-\newcommand{\resumeProjectHeading}[1]{
+\newcommand{\resumeProjectHeadingTwoPiece}[2]{%
     \item
-    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
-      \textbf{\small #1}
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & {\small #2}
     \end{tabular*}\vspace{-10pt}
 }
 
@@ -116,13 +116,22 @@
 }
 
 % Work entry with job description and company split in two columns, date right-aligned
-\newcommand{\resumeWorkEntry}[3]{%
+\newcommand{\resumeItemTripleFirstBold}[3]{%
   \item
     \begin{minipage}[t]{0.55\textwidth}\small \textbf{#1}\end{minipage}%  % Job title
     \begin{minipage}[t]{0.30\textwidth}\small #2\end{minipage}%  % Company
     \hfill%
     \begin{minipage}[t]{0.12\textwidth}\raggedleft\small #3\end{minipage}%  % Date
   \vspace{-12pt}%
+}
+
+\newcommand{\resumeItemTripleForBulletPoints}[3]{%
+  \item
+    \begin{minipage}[t]{0.51\textwidth}\small #1\end{minipage}%  % Job title
+    \begin{minipage}[t]{0.30\textwidth}\small #2\end{minipage}%  % Company
+    \hfill%
+    \begin{minipage}[t]{0.12\textwidth}\raggedleft\small #3\end{minipage}%  % Date
+  \vspace{-6pt}%
 }
 
 %-------------------------------------------
@@ -175,16 +184,16 @@ finance, and high-performance software development.
   \resumeItem{--------- Did Some More Stuff ---------}
   \resumeItem{--------- Did Even More Stuff ---------}
 \resumeItemListEnd
-\vspace{-4pt}
+\vspace{-6pt}
 
-\resumeWorkEntry{Maths \& Computer Science Tutor}{Self Employed}{2025 -- Present}
-\resumeWorkEntry{Cabinet Maker}{Ekard Concepts}{2022 -- Present}
-\resumeWorkEntry{Semi Professional Soccer Player}{Western Rage FC}{2022 -- 2024}
-\resumeWorkEntry{Delivery Expert}{Dominos Pyrmont}{2021 -- 2022}
-\resumeWorkEntry{Childcare Worker}{Annandale After School Care}{2018 -- 2021}
+\resumeItemTripleFirstBold{Maths \& Computer Science Tutor}{Self Employed}{2025 -- Pres}
+\resumeItemTripleFirstBold{Cabinet Maker}{Ekard Concepts}{2022 -- Pres}
+\resumeItemTripleFirstBold{Semi Professional Soccer Player}{Western Rage FC}{2022 -- 2024}
+\resumeItemTripleFirstBold{Delivery Expert}{Dominos Pyrmont}{2021 -- 2022}
+\resumeItemTripleFirstBold{Childcare Worker}{Annandale After School Care}{2018 -- 2021}
 
 \resumeSubHeadingListEnd
-\vspace{-13pt}
+\vspace{-10pt}
 
 
 %-----------PROJECTS-----------
@@ -193,45 +202,39 @@ finance, and high-performance software development.
 
 \resumeSubHeadingListStart
 
-\resumeProjectHeading{Client-Server Trading Exchange/Matching Engine}
-\resumeItemListStart
-\resumeItem{Implemented in Java}
-\resumeItem{GRPC based server connectivity}
-\resumeItem{Swing based GUI}
-\resumeItemListEnd
-\vspace{-13pt}
-
-\resumeProjectHeading{Crypto Market Data Visualiser}
+\resumeProjectHeadingTwoPiece{Crypto Market Data Visualiser} {2025 -- 2026}
 \resumeItemListStart
 \resumeItem{Implemented in C++}
 \resumeItem{Asynchronous web socket server connection using Boost}
 \resumeItem{---------Something else used ---------}
 \resumeItemListEnd
-\vspace{-13pt}
 
-\resumeProjectHeading{Courses}
+\resumeProjectHeadingTwoPiece{Client-Server Trading Exchange/Matching Engine}{2024 -- 2025}
 \resumeItemListStart
-\resumeItemTwoPiece{Machine Learning Specialisation}            {Stanford Online}
-\resumeItemTwoPiece{Options 201}                                {Akuna Capital}
-\resumeItemTwoPiece{Options 101}                                {Akuna Capital}
-\resumeItemTwoPiece{Introduction to Algorithms}                 {MIT Open Courseware}
-\resumeItemTwoPiece{CS50}                                       {Harvard University Online}
+\resumeItem{Implemented in Java}
+\resumeItem{GRPC based server connectivity}
+\resumeItem{Swing based GUI}
 \resumeItemListEnd
-\vspace{-13pt}
 
-\resumeProjectHeading{Readings}
+\resumeProjectHeadingTwoPiece{Courses:}{}
 \resumeItemListStart
-\resumeItemTwoPiece{C++ Software Design}                        {Klaus Iglberger}
-\resumeItemTwoPiece{C++ 23 Best Practices}                      {Jason Turner}
-\resumeItemTwoPiece{Inside the Machine}                         {Jon Stokes}
-\resumeItemTwoPiece{A tour of C++}                              {Bjarne Stroustrup}
-\resumeItemTwoPiece{Operating Systems: Three Easy Pieces}       {Remsi H \& Andrea C}
-\resumeItemTwoPiece{All About High Frequency trading}           {Michael Durbin}
+\resumeItemTripleForBulletPoints{Machine Learning Specialisation}            {Stanford Online}             {2025}
+\resumeItemTripleForBulletPoints{Options 201}                                {Akuna Capital}               {2024}
+\resumeItemTripleForBulletPoints{Options 101}                                {Akuna Capital}               {2024}
+\resumeItemTripleForBulletPoints{Introduction to Algorithms}                 {MIT Open Courseware}         {2023}
+\resumeItemTripleForBulletPoints{CS50}                                       {Harvard University Online}   {2022}
 \resumeItemListEnd
-\vspace{-13pt}
 
+\resumeProjectHeadingTwoPiece{Readings:}{}
+\resumeItemListStart
+\resumeItemTripleForBulletPoints{C++ Software Design}                        {Klaus Iglberger}             {2026}
+\resumeItemTripleForBulletPoints{C++ 23 Best Practices}                      {Jason Turner}                {2025}
+\resumeItemTripleForBulletPoints{Inside the Machine}                         {Jon Stokes}                  {2025}
+\resumeItemTripleForBulletPoints{A tour of C++}                              {Bjarne Stroustrup}           {2025}
+\resumeItemTripleForBulletPoints{Operating Systems: Three Easy Pieces}       {Remsi H \& Andrea C}         {2024}
+\resumeItemTripleForBulletPoints{All About High Frequency trading}           {Michael Durbin}              {2023}
+\resumeItemListEnd
 \resumeSubHeadingListEnd
-\vspace{-3pt}
 
 
 %
