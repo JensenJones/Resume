@@ -1,3 +1,1 @@
-## Resume
-
-- [Latest PDF](out/main.pdf)
+# [Resume](out/main.pdf)
