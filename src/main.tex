@@ -78,22 +78,22 @@
 \newcommand{\resumeSubheading}[5]{
   \vspace{-2pt}\item
     \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} #3 \& {\small #2} \\ % #1 = main title, #2 = date, #3 = secondary left info (e.g., org)
-      \textit{\small #4} \& \textit{\small #5} \\ % #4 = subtitle/extra left, #5 = extra right
+      \textbf{#1} #3 & {\small #2} \\ % #1 = main title, #2 = date, #3 = secondary left info (e.g., org)
+      \textit{\small #4} & \textit{\small #5} \\ % #4 = subtitle/extra left, #5 = extra right
     \end{tabular*}\vspace{-17pt}
 }
 
 \newcommand{\resumeSubSubheading}[2]{
     \item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textit{\small#1} \& \textit{\small #2} \\
+      \textit{\small#1} & \textit{\small #2} \\
     \end{tabular*}\vspace{-7pt}
 }
 
 \newcommand{\resumeProjectHeadingTwoPiece}[2]{%
     \item
     \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
-        \textbf{#1} \& {\small #2}
+        \textbf{#1} & {\small #2}
     \end{tabular*}\vspace{-10pt}
 }
 
@@ -115,7 +115,7 @@
   \vspace{-6pt}%
 }
 
-% Work entry with job description and company split in two columns, date right-aligned
+% Work entry with job, company, date split
 \newcommand{\resumeItemTripleFirstBold}[3]{%
   \item
     \begin{minipage}[t]{0.55\textwidth}\small \textbf{#1}\end{minipage}%  % Job title
@@ -125,14 +125,31 @@
   \vspace{-12pt}%
 }
 
+% Same layout as resumeItemTripleFirstBold, but larger font for key roles
+\newcommand{\resumeItemTripleFirstBoldExtraBig}[3]{%
+  \item
+    \begin{minipage}[t]{0.55\textwidth}\normalsize \textbf{#1}\end{minipage}%  Job title
+    \begin{minipage}[t]{0.30\textwidth}\normalsize #2\end{minipage}%          Company
+    \hfill%
+    \begin{minipage}[t]{0.12\textwidth}\raggedleft\normalsize #3\end{minipage}% Date
+%  \vspace{-8pt}% adjust vertical space as you like
+}
+
+\newcommand{\resumeItemTripleSubtitle}[1]{
+  \begin{minipage}[t]{0.85\textwidth}\small\textit{#1}\end{minipage}
+  \vspace{-12pt}
+}
+
+
 \newcommand{\resumeItemTripleForBulletPoints}[3]{%
   \item
-    \begin{minipage}[t]{0.51\textwidth}\small #1\end{minipage}%  % Job title
-    \begin{minipage}[t]{0.30\textwidth}\small #2\end{minipage}%  % Company
+    \begin{minipage}[t]{0.51\textwidth}\small #1\end{minipage}% Col 1
+    \begin{minipage}[t]{0.30\textwidth}\small #2\end{minipage}%  % Col 2
     \hfill%
-    \begin{minipage}[t]{0.12\textwidth}\raggedleft\small #3\end{minipage}%  % Date
+    \begin{minipage}[t]{0.12\textwidth}\raggedleft\small #3\end{minipage}% Col 3 - usually date
   \vspace{-6pt}%
 }
+
 
 %-------------------------------------------
 %%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -177,8 +194,9 @@ finance, and high-performance software development.
 \section*{Work Experience}
 \resumeSubHeadingListStart
 
-\resumeSubheading
-  {Software Developer Intern}{Dec 2025 -- Feb 2026}{-- Macquarie Bank}{FX Deal Booking Team}{ }
+\resumeItemTripleFirstBoldExtraBig
+  {Software Developer Intern}{Macquarie Bank}{2025 -- 2026}
+\resumeItemTripleSubtitle{FX Deal Booking Team}
 
 \resumeItemListStart
     \resumeItem{Developed the internal fixed income and commodities trading system}
@@ -190,8 +208,8 @@ finance, and high-performance software development.
 \resumeItemTripleFirstBold{Cabinet Maker}                       {Ekard Concepts}                {2022 -- Pres}
 \resumeItemTripleFirstBold{Semi-Professional Soccer Player}     {Western Rage FC}               {2022 -- 2024}
 \resumeItemTripleFirstBold{Delivery Expert}                     {Dominos Pyrmont}               {2021 -- 2022}
-\resumeItemTripleFirstBold{Semi-Professional Fortnite Player}   {Self Employed}                 {2019 -- 2019}
 \resumeItemTripleFirstBold{Childcare Worker}                    {Annandale After School Care}   {2018 -- 2021}
+\resumeItemTripleFirstBold{Semi-Professional Fortnite Player}   {Self Employed}                 {2019 -- 2019}
 
 \resumeSubHeadingListEnd
 \vspace{-10pt}
@@ -261,7 +279,7 @@ finance, and high-performance software development.
 \section*{Interests}
 \vspace{-3pt}
 \begin{tabular*}{\textwidth}{c @{\extracolsep{\fill}} c @{\extracolsep{\fill}} c @{\extracolsep{\fill}} c @{\extracolsep{\fill}} c}
-Soccer & Trees & Competitive Programming & Hiking & Music \\
+Soccer & Horticulture & Competitive Programming & Hiking & Music \\
 \end{tabular*}
 
 
